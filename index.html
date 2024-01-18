@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digitalClock</title>
+</head>
+<body>
+    <script>
+        // JavaScript Intermediate 7 
+        document.write("Assignment No. 4: Console-Based Digital Clock in 24-Hour Format");
+document.write("</br>");
+
+// Develop a console-based digital clock in 24-hour format using JavaScript. Continuously display the current time in the format HH:MM:SS in the console. Handle different cases and ensure continuous updating.
+
+// create a function digitalclock
+function digitalClock() {
+
+    // Create a variable that holds the Date object.
+    let date = new Date();
+
+    // Create a variable that get a Hours Minutes and Seconds method
+    let hourMinSec = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+
+    // we clear all data so the above data is not mixed the new data and we add set interval so bcz of this our brower will be hang
+    console.clear(); 
+    console.log(hourMinSec);
+}
+
+    // setInterval is a function that repeatedly calls a specific function..we add seconds so after 1 seconds this function is repeatedly calls that why we add console clear also
+    setInterval(digitalClock, 1000);
+    document.write("Check this in console");
+    </script>
+</body>
+</html>
